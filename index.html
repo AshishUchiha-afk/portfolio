@@ -45,7 +45,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="Aboutme.png" alt="col1">
+                    <img src="aboutme.png" alt="col1">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -155,6 +155,10 @@
     <footer>
         <p>&copy; 2024 Ashish's Portfolio</p>
     </footer>
+    <button onclick="topFunction()" id="goToTopBtn" title="Go to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
 <script>
 
         var tablinks = document.getElementsByClassName("tab-links");
@@ -200,6 +204,34 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
+    
+    // Get the button
+let goToTopBtn = document.getElementById("goToTopBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        goToTopBtn.style.display = "block";
+    } else {
+        goToTopBtn.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    // Play beep sound
+    var beep = new Audio('beep.mp3');
+    beep.play();
+    
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
   </script>
+  
+
+
 </body>
 </html>
