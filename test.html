@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap" rel="stylesheet">
+    <link rel = 'stylesheet' href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id = 'header'>
+        <div class="container">
+            <nav>
+                <img src="logo.png" class = 'logo'>
+                <ul id="sidemenu">
+                    <li><a href='#header'>Home</a></li>
+                    <li><a href='#about'>About</a></li>
+                    <li><a href='#services'>Services</a></li>
+                    <li><a href='#portfolio'>Portfolio</a></li>
+                    <li><a href='#contact'>Contact</a></li>
+                    <i class="fas fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Cloud Engineer</p>
+                <h1>Hi, I'm <span>Ashish</span></h1>
+            </div>
+        </div>
+    </div>
+    <!----------------------about ---------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="aboutme.png" alt="col1">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I thrive on the challenges of designing and optimizing cloud-based solutions. I'm passionate about staying ahead in the rapidly evolving cloud landscape, always eager to learn and adapt to new technologies. With a problem-solving mindset and a keen eye for detail, I enjoy tackling complex tasks like optimizing cloud infrastructure for performance and cost-efficiency, automating processes for seamless scalability, and ensuring robust security across environments.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Linux Admin<br></span>Work and Administrate Linux machines</li>
+                        <li><span>Cloud Associate<br></span>Can work with AWS, GCP, Azure cloud providers</li>
+                        <li><span>Python</span><br>Comfortable to code in python language</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023 - Current<br></span>Packaged app development Associate at Accenture</li>
+                        <li><span>2022 - 2023<br></span>AWS Training at Datapro</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024 - Current<br></span>Minors in AI at IIT Ropar</li>
+                        <li><span>2020 - 2023<br></span>B.Sc Computer Science from Aditya Degree College</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------services------------------------->
+     <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Cloud Solutions Architect</h2>
+                    <p>I design, implement, and optimize cloud-based infrastructures using AWS, GCP, and Azure. Whether you need to migrate existing systems to the cloud, optimize for cost and performance, or develop new cloud-native applications, I can help you achieve your goals</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>Linux System Administration</h2>
+                    <p> I offer expert Linux administration services, including server setup, maintenance, security hardening, and automation. I ensure that your Linux environments are stable, secure, and performing at their best.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>Python Scripting and Automation</h2>
+                    <p>I offer Python scripting services for automating repetitive tasks, data processing, and simple workflows. Whether you need to automate file handling, perform basic data analysis, or streamline processes, I can write efficient and straightforward Python scripts to meet your needs.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!-- -------------------portfolio------------------ -->
+      <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="my-work.jpeg" alt="AWS">
+                    <div class="layer">
+                        <h3>AWS services</h3>
+                        <p>Successfully deployed a website using AWS RDS & LB</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="my-work2.jpeg" alt="AWS">
+                    <div class="layer">
+                    <h3>Azure Auto ML model</h3>
+                    <p>This Project helps identify images. First have to create a dataset, i used MNIST from Kaggle for this we can also
+                        create a custom dataset</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </div>
+<!-- --------------------------contact ---------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact ME</h1>
+                <p><i class="fa-solid fa-share"></i>rangabatlaash@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+91 8179952118</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/ashish-rangabatla-230abb280"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/ashish.namikaze/"><i class="fa-brands fa-instagram"></i></a>   
+                </div>    
+                <a href="Ashish_Resume.pdf" download class="btn">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <p>&copy; 2024 Ashish's Portfolio</p>
+    </footer>
+<script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+</script>
+<script>
+
+    var sidemeu = document.getElementById('sidemenu');
+
+    function openmenu(){
+        sidemeu.style.right = '0';
+    }
+    function closemenu(){
+        sidemeu.style.right = '-200px';
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzZj6FagyDfRVCJZFOgr2t9BU0vu5ZOAIPaNVrYx8IMcge3O9JILCdca13iYSTHV8M/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg')
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = 'Message sent successfully !!'
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
