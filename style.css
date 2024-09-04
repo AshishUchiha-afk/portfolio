@@ -10,7 +10,26 @@ html{
 body{
     background: black;
     color: white;
+    overflow-x: hidden;
 }
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    position: relative;
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 #header{
     width: 100%;
     height: 100vh;
@@ -66,6 +85,9 @@ nav ul li a:hover::after{
 .header-text{
     margin-top: 10%;
     font-size: 30px;
+    opacity: 0;
+    transform: scale(2);
+    animation: popOut 0.8s forwards ease-in-out;
 }
 .header-text h1{
     font-size: 60px;
@@ -90,14 +112,15 @@ nav ul li a:hover::after{
     flex-basis: 35%;
 }
 .about-col-1 img{
-    width: 100%;
+    width: 95%;
     border-radius: 15px;
 }
 
 .about-col-2{
     flex-basis: 60%;
     height: 500px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    padding: 10px;
 }
 
 .sub-title{
@@ -108,7 +131,7 @@ nav ul li a:hover::after{
 
 .tab-titles{
     display: flex;
-    margin: 20px 0 40px;
+    margin: 20px 0 50px;
 }
 
 .tab-links{
@@ -395,4 +418,9 @@ nav .fas{
 #goToTopBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
 }
-
+@keyframes popOut {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
